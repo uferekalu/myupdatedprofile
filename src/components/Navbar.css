@@ -50,7 +50,7 @@
 .about__link:hover,
 .project__link:hover,
 .contact__link:hover {
-    background: #66219e;
+    background: rgba(0, 0, 0, 0.4);
     color: #f4f4f4;
 }
 .hamburger__menu {
@@ -68,7 +68,7 @@
     background: #f4f4f4;
 }
 .hamburger__menu:hover > div {
-    background: #66219e;
+    background: yellow;
 }
 @media (max-width: 960px) {
     .navbar__links {
@@ -77,9 +77,15 @@
     .hamburger__menu {
         display: flex;
     }
+    .navbar__links > li > a > span  {
+        font-size: .5rem;
+    }
 }
 @media (max-width: 500px) {
     .navbar__logo h2 {
         font-size: 1rem;
+    }
+    .navbar__links > li > a > span  {
+        font-size: .5rem;
     }
 }
