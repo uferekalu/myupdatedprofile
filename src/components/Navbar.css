@@ -42,7 +42,7 @@
 .about__link,
 .project__link,
 .contact__link {
-    background: green;
+    background: rgba(0, 0, 0, 0.4);
     padding: 10px;;
     border-radius: 8px;
 }
@@ -50,7 +50,7 @@
 .about__link:hover,
 .project__link:hover,
 .contact__link:hover {
-    background: rgba(0, 0, 0, 0.4);
+    background: green;
     color: #f4f4f4;
 }
 .hamburger__menu {

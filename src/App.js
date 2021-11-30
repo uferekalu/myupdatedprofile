@@ -7,6 +7,7 @@ import HomeScreen from "./screens/HomeScreen";
 import ProjectsScreen from "./screens/ProjectsScreen";
 import ProjectDetailScreen from "./screens/ProjectDetailScreen";
 import AboutMe from "./screens/AboutMe"
+import Contact from "./screens/Contact";
 
 //components
 import Navbar from "./components/Navbar";
@@ -27,6 +28,7 @@ function App() {
         <Route path="/about" element={<AboutMe />} />
         <Route path="/projects" element={<ProjectsScreen />} />
         <Route path="/project/:id" element={<ProjectDetailScreen />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
