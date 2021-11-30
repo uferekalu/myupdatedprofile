@@ -1,9 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import "./ProjectDetailScreen.css";
-import { Link } from "react-router-dom";
 
 //Actions
 import { getProjectDetails } from "../redux/actions/projectAction";
@@ -12,8 +11,6 @@ const ProjectDetailScreen = () => {
   const dispatch = useDispatch();
 
   const { id } = useParams();
-
-  const navigate = useNavigate();
 
   const projectDetails = useSelector(state => state.getProjectDetails);
 
