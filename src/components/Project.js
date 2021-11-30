@@ -2,22 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Project.css";
 
-const Project = () => {
+const Project = ({ name, projectId, img, description }) => {
   return (
     <div className="project">
-      <img
-        src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-        alt="project"
-      />
+      <img src={img} alt={name} />
       <div className="project__info">
-        <p className="info__name">Project 1</p>
-        <p className="info__description">
-          {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled".substring(
-            0,
-            100
-          )}...
+        <p className="info__name">
+          {name}
         </p>
-        <Link to={`/project/${123}`} className="info__button">
+        <p className="info__description">
+          {description.substring(0, 100)}...
+        </p>
+        <Link to={`/project/${projectId}`} className="info__button">
           See Details...
         </Link>
       </div>

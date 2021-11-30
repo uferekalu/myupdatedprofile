@@ -14,7 +14,25 @@
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   padding: 10px;
+  border-bottom: 5px solid rgb(62, 77, 30);
+  position: relative;
 }
+/* .left__image::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%; 
+    width: 100%;
+    background: rgb(62, 77, 30);
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .left__image:hover::after {
+    top: 0;
+    opacity: 0.6;
+  } */
 .left__image > img {
   width: 70%;
   height: 70%;
@@ -95,6 +113,6 @@
     font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
   }
 }

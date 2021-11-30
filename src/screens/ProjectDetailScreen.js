@@ -1,39 +1,61 @@
 import React from "react";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useParams, useNavigate } from "react-router-dom"
 import "./ProjectDetailScreen.css";
 import { Link } from "react-router-dom";
 
+//Actions
+import { getProjectDetails } from "../redux/actions/projectAction";
+
 const ProjectDetailScreen = () => {
+  const dispatch = useDispatch();
+
+  const { id } = useParams();
+
+  const navigate = useNavigate();
+
+  const projectDetails = useSelector(state => state.getProjectDetails);
+
+  const { loading, error, project } = projectDetails;
+
+  useEffect(() => {
+    if(project && id !== project._id) {
+      dispatch(getProjectDetails(id));
+    }
+  }, [dispatch, project, id]);
+
   return (
-    <div className="productdetail">
+    <div className="productdetail">{loading ? (<h2><i className="fas fa-spinner fa-spin fa-3x"></i></h2>) : error ? (<h2>{error}</h2>) : (
+      <>
       <div classsName="productdetail__left">
         <div className="left__image">
-        <p className="left__name__title">Project 1</p>
+        <p className="left__name__title">{project.name}</p>
           <img
-            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-            alt="project"
+            src={project.img}
+            alt={project.name}
           />
         </div>
       </div>
       <div className="productdetail__right">
         <div className="right__info">
-          <p className="right__name">Project 1</p>
+          <p className="right__name">{project.name}</p>
           <p className="right__desc">DESCRIPTION:</p>
           <p className="info__detail__description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled
+            {project.description}
           </p>
         </div>
         <div className="productdetail__links">
-          <Link to="" className="info__button__preview">
+          <a href={project.weburl} target="_blank" rel="noreferrer" className="info__button__preview">
             Preview
-          </Link>
-          <Link to="" className="info__button__git">
+          </a>
+          <a href={project.repourl} target="_blank" rel="noreferrer" className="info__button__git">
             GitHub
-          </Link>
+          </a>
         </div>
       </div>
+      </>
+    )}
     </div>
   );
 };

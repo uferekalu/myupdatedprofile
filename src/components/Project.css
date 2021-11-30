@@ -34,7 +34,7 @@
     font-size: 1rem;
 }
 .info__button:hover {
-    background: #171711;
+    background: rgb(62, 77, 30);
     color: #f4f4f4;
 }
 @media (max-width: 1232px) {

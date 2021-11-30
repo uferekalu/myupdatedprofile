@@ -29,7 +29,7 @@ export const getProjectDetails = id => async dispatch => {
     dispatch({ type: actionTypes.GET_PROJECT_DETAILS_REQUEST });
 
     const { data } = await axios.get(
-      `https://ufere-project-api.herokuapp.com/api/projects/${id}`
+      `https://ufere-project-api.herokuapp.com/api/project/${id}`
     );
 
     dispatch({
