@@ -12,6 +12,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+.search__project {
+    padding: 12px 15px;
+    /* float: right; */
+    margin-bottom: 12px;
+    margin-left: 85%;
+}
 @media (max-width: 1232px) {
     .projects__list {
         grid-template-columns: repeat(3, 1fr);
@@ -25,5 +31,30 @@
 @media (max-width: 630px) {
     .projects__list {
         grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1226px) {
+    .search__project {
+        margin-left: 80%;
+    }
+}
+@media (max-width: 930px) {
+    .search__project {
+        margin-left: 75%;
+    }
+}
+@media (max-width: 740px) {
+    .search__project {
+        margin-left: 65%;
+    }
+}
+@media (max-width: 535px) {
+    .search__project {
+        margin-left: 60%;
+    }
+}
+@media (max-width: 466px) {
+    .search__project {
+        margin-left: 50%;
     }
 }
