@@ -5,6 +5,7 @@ import "./ProjectsScreen.css";
 
 //components
 import Project from "../components/Project";
+import Pagination from "../components/Pagination";
 
 //Actions
 import { getProjects as listProjects } from "../redux/actions/projectAction";
@@ -50,22 +51,12 @@ const ProjectsScreen = () => {
             ? <h2>
                 {error}
               </h2>
-            : filteredProjects
-                .sort(
-                  (a, b) =>
-                    a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1
-                )
-                .map(project =>
-                  <Project
-                    key={project._id}
-                    projectId={project._id}
-                    name={project.name}
-                    weburl={project.weburl}
-                    repourl={project.repourl}
-                    img={project.img}
-                    description={project.description}
-                  />
-                )}
+            : <Pagination
+                data={filteredProjects}
+                RenderComponent={Project}
+                dataLimit={8}
+                pageLimit={3}
+              />}
       </div>
     </div>
   );
