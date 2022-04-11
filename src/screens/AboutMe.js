@@ -9,7 +9,7 @@ const AboutMe = () => {
         <p>
           A passionate web developer with 3+ years progressive working
           experience using such technologies as HTML5, CSS3, SASS, JavaScript,
-          Node Js, React Js, Next Js, Python, Django, MySQL, AWS, Firebase etc.,
+          Node Js, React Js, Next Js, Nest js, GraphQL, MySQL, AWS etc.,
           in building web solutions that are mobile-friendly, user-oriented
           among other client requirements. I have keen interest in collaborating
           and contributing to development teams..
