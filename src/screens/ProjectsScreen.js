@@ -13,7 +13,6 @@ import { getProjects as listProjects } from "../redux/actions/projectAction";
 
 const ProjectsScreen = () => {
   const [filteredProjects, setFilteredProjects] = useState(null);
-  const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const [searchItem, setSearchItem] = useState('')
   const [scroll, setScroll] = useState(false)
