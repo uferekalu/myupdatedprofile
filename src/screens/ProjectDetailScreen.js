@@ -23,7 +23,10 @@ const ProjectDetailScreen = () => {
   }, [dispatch, project, id]);
 
   return (
-    <div className="productdetail">{loading ? (<h2><i className="fas fa-spinner fa-spin fa-2x"></i></h2>) : error ? (<h2>{error}</h2>) : (
+    <div className="productdetail">{loading ? 
+      <div className={`loading spinner}`}>
+        <p><i className="fas fa-spinner fa-spin fa-2x"></i></p>
+      </div> : error ? (<h2>{error}</h2>) : (
       <>
       <div classsName="productdetail__left">
         <div className="left__image">
