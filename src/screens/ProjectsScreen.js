@@ -105,6 +105,8 @@ const handleScroll = () => {
                   <option value="A Mini Shopping app that displays products with add">Shopping app that displays products</option>
                   <option value="A Test platform for assessing the skill level of interviewees ">Test platform for assessing the skill level</option>
                   <option value="This App displays information regarding various interesting places around the world">Application that displays informations about places</option>
+                  <option value="This is an application which gives information regarding the location, flag, population">Application that displays informations about countries</option>
+                  <option value="This is an application which aids renters to make payments of an apartment in installments">Application that helps renters make installmental payments</option>
               </select>
           </div>
       </div>
